@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 public class SequenceDao {
     private String prefix;
     private String suffix;
-    private Long inital;
+    private String inital;
+    private int counter;
 
     public String getPrefix() {
         return prefix;
@@ -24,20 +25,19 @@ public class SequenceDao {
         this.suffix = suffix;
     }
 
-    public Long getInital() {
+    public String getInital() {
         return inital;
     }
 
-    public void setInital(Long inital) {
+    public void setInital(String inital) {
         this.inital = inital;
     }
 
-    @Override
-    public String toString() {
-        return "SequenceDao{" +
-                "prefix='" + prefix + '\'' +
-                ", suffix='" + suffix + '\'' +
-                ", inital=" + inital +
-                '}';
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
     }
 }
